@@ -1,0 +1,449 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		61E9D3C9173ACB87007A5F55 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61E9D3C8173ACB87007A5F55 /* UIKit.framework */; };
+		61E9D3CB173ACB87007A5F55 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61E9D3CA173ACB87007A5F55 /* Foundation.framework */; };
+		61E9D3CD173ACB87007A5F55 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61E9D3CC173ACB87007A5F55 /* CoreGraphics.framework */; };
+		61E9D3D5173ACB87007A5F55 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E9D3D4173ACB87007A5F55 /* main.m */; };
+		61E9D3D9173ACB87007A5F55 /* FasTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E9D3D8173ACB87007A5F55 /* FasTAppDelegate.m */; };
+		61E9D738173AF8E9007A5F55 /* SocketIO.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E9D3EC173AF8E7007A5F55 /* SocketIO.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		61E9D739173AF8E9007A5F55 /* SocketIOJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E9D3EE173AF8E7007A5F55 /* SocketIOJSONSerialization.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		61E9D73A173AF8E9007A5F55 /* SocketIOPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E9D3F0173AF8E7007A5F55 /* SocketIOPacket.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		61E9D73B173AF8E9007A5F55 /* SocketIOTransportWebsocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E9D3F3173AF8E7007A5F55 /* SocketIOTransportWebsocket.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		61E9D73C173AF8E9007A5F55 /* SocketIOTransportXHR.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E9D3F5173AF8E7007A5F55 /* SocketIOTransportXHR.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		61E9D9A8173AF8EA007A5F55 /* base64.c in Sources */ = {isa = PBXBuildFile; fileRef = 61E9D6F9173AF8E9007A5F55 /* base64.c */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		61E9D9A9173AF8EA007A5F55 /* NSData+SRB64Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E9D6FC173AF8E9007A5F55 /* NSData+SRB64Additions.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		61E9D9AA173AF8EA007A5F55 /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E9D6FF173AF8E9007A5F55 /* SRWebSocket.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		61E9D9E9173AF97E007A5F55 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61E9D9E8173AF97E007A5F55 /* Security.framework */; };
+		61E9D9EB173AF985007A5F55 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61E9D9EA173AF985007A5F55 /* CFNetwork.framework */; };
+		61E9D9ED173AF992007A5F55 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 61E9D9EC173AF992007A5F55 /* libicucore.dylib */; };
+		61E9DA02173AF9C8007A5F55 /* FasTEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E9D9EF173AF9C8007A5F55 /* FasTEvent.m */; };
+		61E9DA03173AF9C8007A5F55 /* FasTEventDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E9D9F1173AF9C8007A5F55 /* FasTEventDate.m */; };
+		61E9DA04173AF9C8007A5F55 /* FasTFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E9D9F3173AF9C8007A5F55 /* FasTFormatter.m */; };
+		61E9DA05173AF9C8007A5F55 /* FasTNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E9D9F5173AF9C8007A5F55 /* FasTNode.m */; };
+		61E9DA06173AF9C8007A5F55 /* FasTOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E9D9F7173AF9C8007A5F55 /* FasTOrder.m */; };
+		61E9DA07173AF9C8007A5F55 /* FasTSeat.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E9D9F9173AF9C8007A5F55 /* FasTSeat.m */; };
+		61E9DA08173AF9C8007A5F55 /* FasTSeatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E9D9FB173AF9C8007A5F55 /* FasTSeatingView.m */; };
+		61E9DA09173AF9C8007A5F55 /* FasTSeatView.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E9D9FD173AF9C8007A5F55 /* FasTSeatView.m */; };
+		61E9DA0A173AF9C8007A5F55 /* FasTTicketPrinter.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E9D9FF173AF9C8007A5F55 /* FasTTicketPrinter.m */; };
+		61E9DA0B173AF9C8007A5F55 /* FasTTicketType.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E9DA01173AF9C8007A5F55 /* FasTTicketType.m */; };
+		61E9DA13173B036B007A5F55 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 61E9D3D1173ACB87007A5F55 /* InfoPlist.strings */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		61E9D3C5173ACB87007A5F55 /* FasT-retail-checkout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FasT-retail-checkout.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		61E9D3C8173ACB87007A5F55 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		61E9D3CA173ACB87007A5F55 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		61E9D3CC173ACB87007A5F55 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		61E9D3D0173ACB87007A5F55 /* FasT-retail-checkout-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FasT-retail-checkout-Info.plist"; sourceTree = "<group>"; };
+		61E9D3D4173ACB87007A5F55 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		61E9D3D6173ACB87007A5F55 /* FasT-retail-checkout-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FasT-retail-checkout-Prefix.pch"; sourceTree = "<group>"; };
+		61E9D3D7173ACB87007A5F55 /* FasTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FasTAppDelegate.h; sourceTree = "<group>"; };
+		61E9D3D8173ACB87007A5F55 /* FasTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FasTAppDelegate.m; sourceTree = "<group>"; };
+		61E9D3E5173ACC27007A5F55 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		61E9D3EB173AF8E7007A5F55 /* SocketIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketIO.h; sourceTree = "<group>"; };
+		61E9D3EC173AF8E7007A5F55 /* SocketIO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketIO.m; sourceTree = "<group>"; };
+		61E9D3ED173AF8E7007A5F55 /* SocketIOJSONSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketIOJSONSerialization.h; sourceTree = "<group>"; };
+		61E9D3EE173AF8E7007A5F55 /* SocketIOJSONSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketIOJSONSerialization.m; sourceTree = "<group>"; };
+		61E9D3EF173AF8E7007A5F55 /* SocketIOPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketIOPacket.h; sourceTree = "<group>"; };
+		61E9D3F0173AF8E7007A5F55 /* SocketIOPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketIOPacket.m; sourceTree = "<group>"; };
+		61E9D3F1173AF8E7007A5F55 /* SocketIOTransport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketIOTransport.h; sourceTree = "<group>"; };
+		61E9D3F2173AF8E7007A5F55 /* SocketIOTransportWebsocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketIOTransportWebsocket.h; sourceTree = "<group>"; };
+		61E9D3F3173AF8E7007A5F55 /* SocketIOTransportWebsocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketIOTransportWebsocket.m; sourceTree = "<group>"; };
+		61E9D3F4173AF8E7007A5F55 /* SocketIOTransportXHR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketIOTransportXHR.h; sourceTree = "<group>"; };
+		61E9D3F5173AF8E7007A5F55 /* SocketIOTransportXHR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketIOTransportXHR.m; sourceTree = "<group>"; };
+		61E9D6F9173AF8E9007A5F55 /* base64.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = base64.c; sourceTree = "<group>"; };
+		61E9D6FA173AF8E9007A5F55 /* base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base64.h; sourceTree = "<group>"; };
+		61E9D6FB173AF8E9007A5F55 /* NSData+SRB64Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+SRB64Additions.h"; sourceTree = "<group>"; };
+		61E9D6FC173AF8E9007A5F55 /* NSData+SRB64Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+SRB64Additions.m"; sourceTree = "<group>"; };
+		61E9D6FD173AF8E9007A5F55 /* SocketRocket-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SocketRocket-Prefix.pch"; sourceTree = "<group>"; };
+		61E9D6FE173AF8E9007A5F55 /* SRWebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRWebSocket.h; sourceTree = "<group>"; };
+		61E9D6FF173AF8E9007A5F55 /* SRWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRWebSocket.m; sourceTree = "<group>"; };
+		61E9D9E8173AF97E007A5F55 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		61E9D9EA173AF985007A5F55 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		61E9D9EC173AF992007A5F55 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		61E9D9EE173AF9C8007A5F55 /* FasTEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FasTEvent.h; path = "submodules/FasT-objc-common/FasTEvent.h"; sourceTree = SOURCE_ROOT; };
+		61E9D9EF173AF9C8007A5F55 /* FasTEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FasTEvent.m; path = "submodules/FasT-objc-common/FasTEvent.m"; sourceTree = SOURCE_ROOT; };
+		61E9D9F0173AF9C8007A5F55 /* FasTEventDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FasTEventDate.h; path = "submodules/FasT-objc-common/FasTEventDate.h"; sourceTree = SOURCE_ROOT; };
+		61E9D9F1173AF9C8007A5F55 /* FasTEventDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FasTEventDate.m; path = "submodules/FasT-objc-common/FasTEventDate.m"; sourceTree = SOURCE_ROOT; };
+		61E9D9F2173AF9C8007A5F55 /* FasTFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FasTFormatter.h; path = "submodules/FasT-objc-common/FasTFormatter.h"; sourceTree = SOURCE_ROOT; };
+		61E9D9F3173AF9C8007A5F55 /* FasTFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FasTFormatter.m; path = "submodules/FasT-objc-common/FasTFormatter.m"; sourceTree = SOURCE_ROOT; };
+		61E9D9F4173AF9C8007A5F55 /* FasTNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FasTNode.h; path = "submodules/FasT-objc-common/FasTNode.h"; sourceTree = SOURCE_ROOT; };
+		61E9D9F5173AF9C8007A5F55 /* FasTNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FasTNode.m; path = "submodules/FasT-objc-common/FasTNode.m"; sourceTree = SOURCE_ROOT; };
+		61E9D9F6173AF9C8007A5F55 /* FasTOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FasTOrder.h; path = "submodules/FasT-objc-common/FasTOrder.h"; sourceTree = SOURCE_ROOT; };
+		61E9D9F7173AF9C8007A5F55 /* FasTOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FasTOrder.m; path = "submodules/FasT-objc-common/FasTOrder.m"; sourceTree = SOURCE_ROOT; };
+		61E9D9F8173AF9C8007A5F55 /* FasTSeat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FasTSeat.h; path = "submodules/FasT-objc-common/FasTSeat.h"; sourceTree = SOURCE_ROOT; };
+		61E9D9F9173AF9C8007A5F55 /* FasTSeat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FasTSeat.m; path = "submodules/FasT-objc-common/FasTSeat.m"; sourceTree = SOURCE_ROOT; };
+		61E9D9FA173AF9C8007A5F55 /* FasTSeatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FasTSeatingView.h; path = "submodules/FasT-objc-common/FasTSeatingView.h"; sourceTree = SOURCE_ROOT; };
+		61E9D9FB173AF9C8007A5F55 /* FasTSeatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FasTSeatingView.m; path = "submodules/FasT-objc-common/FasTSeatingView.m"; sourceTree = SOURCE_ROOT; };
+		61E9D9FC173AF9C8007A5F55 /* FasTSeatView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FasTSeatView.h; path = "submodules/FasT-objc-common/FasTSeatView.h"; sourceTree = SOURCE_ROOT; };
+		61E9D9FD173AF9C8007A5F55 /* FasTSeatView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FasTSeatView.m; path = "submodules/FasT-objc-common/FasTSeatView.m"; sourceTree = SOURCE_ROOT; };
+		61E9D9FE173AF9C8007A5F55 /* FasTTicketPrinter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FasTTicketPrinter.h; path = "submodules/FasT-objc-common/FasTTicketPrinter.h"; sourceTree = SOURCE_ROOT; };
+		61E9D9FF173AF9C8007A5F55 /* FasTTicketPrinter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FasTTicketPrinter.m; path = "submodules/FasT-objc-common/FasTTicketPrinter.m"; sourceTree = SOURCE_ROOT; };
+		61E9DA00173AF9C8007A5F55 /* FasTTicketType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FasTTicketType.h; path = "submodules/FasT-objc-common/FasTTicketType.h"; sourceTree = SOURCE_ROOT; };
+		61E9DA01173AF9C8007A5F55 /* FasTTicketType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FasTTicketType.m; path = "submodules/FasT-objc-common/FasTTicketType.m"; sourceTree = SOURCE_ROOT; };
+		61E9DA0E173AFA54007A5F55 /* PKJob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKJob.h; sourceTree = "<group>"; };
+		61E9DA0F173AFA54007A5F55 /* PKPaper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKPaper.h; sourceTree = "<group>"; };
+		61E9DA10173AFA54007A5F55 /* PKPrinter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKPrinter.h; sourceTree = "<group>"; };
+		61E9DA11173AFA54007A5F55 /* PKPrinterBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKPrinterBrowser.h; sourceTree = "<group>"; };
+		61E9DA12173AFA54007A5F55 /* PKPrintSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKPrintSettings.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		61E9D3C2173ACB87007A5F55 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61E9D9ED173AF992007A5F55 /* libicucore.dylib in Frameworks */,
+				61E9D9EB173AF985007A5F55 /* CFNetwork.framework in Frameworks */,
+				61E9D9E9173AF97E007A5F55 /* Security.framework in Frameworks */,
+				61E9D3C9173ACB87007A5F55 /* UIKit.framework in Frameworks */,
+				61E9D3CB173ACB87007A5F55 /* Foundation.framework in Frameworks */,
+				61E9D3CD173ACB87007A5F55 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		61E9D3BC173ACB87007A5F55 = {
+			isa = PBXGroup;
+			children = (
+				61E9D3CE173ACB87007A5F55 /* FasT-retail-checkout */,
+				61E9D3C7173ACB87007A5F55 /* Frameworks */,
+				61E9D3C6173ACB87007A5F55 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		61E9D3C6173ACB87007A5F55 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				61E9D3C5173ACB87007A5F55 /* FasT-retail-checkout.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		61E9D3C7173ACB87007A5F55 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				61E9D3E6173AF8E7007A5F55 /* socket.IO */,
+				61E9DA0D173AFA54007A5F55 /* PrintKit */,
+				61E9D9E8173AF97E007A5F55 /* Security.framework */,
+				61E9D9EA173AF985007A5F55 /* CFNetwork.framework */,
+				61E9D9EC173AF992007A5F55 /* libicucore.dylib */,
+				61E9D3C8173ACB87007A5F55 /* UIKit.framework */,
+				61E9D3CA173ACB87007A5F55 /* Foundation.framework */,
+				61E9D3CC173ACB87007A5F55 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		61E9D3CE173ACB87007A5F55 /* FasT-retail-checkout */ = {
+			isa = PBXGroup;
+			children = (
+				61E9D3D7173ACB87007A5F55 /* FasTAppDelegate.h */,
+				61E9D3D8173ACB87007A5F55 /* FasTAppDelegate.m */,
+				61E9D3CF173ACB87007A5F55 /* Supporting Files */,
+				61E9DA0C173AF9D5007A5F55 /* FasT-objc-common */,
+			);
+			path = "FasT-retail-checkout";
+			sourceTree = "<group>";
+		};
+		61E9D3CF173ACB87007A5F55 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				61E9D3D0173ACB87007A5F55 /* FasT-retail-checkout-Info.plist */,
+				61E9D3D1173ACB87007A5F55 /* InfoPlist.strings */,
+				61E9D3D4173ACB87007A5F55 /* main.m */,
+				61E9D3D6173ACB87007A5F55 /* FasT-retail-checkout-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			path = "../FasT-retail-checkout";
+			sourceTree = "<group>";
+		};
+		61E9D3E6173AF8E7007A5F55 /* socket.IO */ = {
+			isa = PBXGroup;
+			children = (
+				61E9D3EB173AF8E7007A5F55 /* SocketIO.h */,
+				61E9D3EC173AF8E7007A5F55 /* SocketIO.m */,
+				61E9D3ED173AF8E7007A5F55 /* SocketIOJSONSerialization.h */,
+				61E9D3EE173AF8E7007A5F55 /* SocketIOJSONSerialization.m */,
+				61E9D3EF173AF8E7007A5F55 /* SocketIOPacket.h */,
+				61E9D3F0173AF8E7007A5F55 /* SocketIOPacket.m */,
+				61E9D3F1173AF8E7007A5F55 /* SocketIOTransport.h */,
+				61E9D3F2173AF8E7007A5F55 /* SocketIOTransportWebsocket.h */,
+				61E9D3F3173AF8E7007A5F55 /* SocketIOTransportWebsocket.m */,
+				61E9D3F4173AF8E7007A5F55 /* SocketIOTransportXHR.h */,
+				61E9D3F5173AF8E7007A5F55 /* SocketIOTransportXHR.m */,
+				61E9D6F8173AF8E9007A5F55 /* SocketRocket */,
+			);
+			name = socket.IO;
+			path = "submodules/FasT-objc-common/submodules/socket.IO";
+			sourceTree = "<group>";
+		};
+		61E9D6F8173AF8E9007A5F55 /* SocketRocket */ = {
+			isa = PBXGroup;
+			children = (
+				61E9D6F9173AF8E9007A5F55 /* base64.c */,
+				61E9D6FA173AF8E9007A5F55 /* base64.h */,
+				61E9D6FB173AF8E9007A5F55 /* NSData+SRB64Additions.h */,
+				61E9D6FC173AF8E9007A5F55 /* NSData+SRB64Additions.m */,
+				61E9D6FD173AF8E9007A5F55 /* SocketRocket-Prefix.pch */,
+				61E9D6FE173AF8E9007A5F55 /* SRWebSocket.h */,
+				61E9D6FF173AF8E9007A5F55 /* SRWebSocket.m */,
+			);
+			name = SocketRocket;
+			path = "submodules/socket-rocket/SocketRocket";
+			sourceTree = "<group>";
+		};
+		61E9DA0C173AF9D5007A5F55 /* FasT-objc-common */ = {
+			isa = PBXGroup;
+			children = (
+				61E9D9EE173AF9C8007A5F55 /* FasTEvent.h */,
+				61E9D9EF173AF9C8007A5F55 /* FasTEvent.m */,
+				61E9D9F0173AF9C8007A5F55 /* FasTEventDate.h */,
+				61E9D9F1173AF9C8007A5F55 /* FasTEventDate.m */,
+				61E9D9F2173AF9C8007A5F55 /* FasTFormatter.h */,
+				61E9D9F3173AF9C8007A5F55 /* FasTFormatter.m */,
+				61E9D9F4173AF9C8007A5F55 /* FasTNode.h */,
+				61E9D9F5173AF9C8007A5F55 /* FasTNode.m */,
+				61E9D9F6173AF9C8007A5F55 /* FasTOrder.h */,
+				61E9D9F7173AF9C8007A5F55 /* FasTOrder.m */,
+				61E9D9F8173AF9C8007A5F55 /* FasTSeat.h */,
+				61E9D9F9173AF9C8007A5F55 /* FasTSeat.m */,
+				61E9D9FA173AF9C8007A5F55 /* FasTSeatingView.h */,
+				61E9D9FB173AF9C8007A5F55 /* FasTSeatingView.m */,
+				61E9D9FC173AF9C8007A5F55 /* FasTSeatView.h */,
+				61E9D9FD173AF9C8007A5F55 /* FasTSeatView.m */,
+				61E9D9FE173AF9C8007A5F55 /* FasTTicketPrinter.h */,
+				61E9D9FF173AF9C8007A5F55 /* FasTTicketPrinter.m */,
+				61E9DA00173AF9C8007A5F55 /* FasTTicketType.h */,
+				61E9DA01173AF9C8007A5F55 /* FasTTicketType.m */,
+			);
+			name = "FasT-objc-common";
+			sourceTree = "<group>";
+		};
+		61E9DA0D173AFA54007A5F55 /* PrintKit */ = {
+			isa = PBXGroup;
+			children = (
+				61E9DA0E173AFA54007A5F55 /* PKJob.h */,
+				61E9DA0F173AFA54007A5F55 /* PKPaper.h */,
+				61E9DA10173AFA54007A5F55 /* PKPrinter.h */,
+				61E9DA11173AFA54007A5F55 /* PKPrinterBrowser.h */,
+				61E9DA12173AFA54007A5F55 /* PKPrintSettings.h */,
+			);
+			path = PrintKit;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		61E9D3C4173ACB87007A5F55 /* FasT-retail-checkout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 61E9D3E2173ACB87007A5F55 /* Build configuration list for PBXNativeTarget "FasT-retail-checkout" */;
+			buildPhases = (
+				61E9D3C1173ACB87007A5F55 /* Sources */,
+				61E9D3C2173ACB87007A5F55 /* Frameworks */,
+				61E9D3C3173ACB87007A5F55 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FasT-retail-checkout";
+			productName = "FasT-retail-manager";
+			productReference = 61E9D3C5173ACB87007A5F55 /* FasT-retail-checkout.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		61E9D3BD173ACB87007A5F55 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = FasT;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = Albisigns;
+			};
+			buildConfigurationList = 61E9D3C0173ACB87007A5F55 /* Build configuration list for PBXProject "FasT-retail-checkout" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				de,
+			);
+			mainGroup = 61E9D3BC173ACB87007A5F55;
+			productRefGroup = 61E9D3C6173ACB87007A5F55 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				61E9D3C4173ACB87007A5F55 /* FasT-retail-checkout */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		61E9D3C3173ACB87007A5F55 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61E9DA13173B036B007A5F55 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		61E9D3C1173ACB87007A5F55 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61E9D3D5173ACB87007A5F55 /* main.m in Sources */,
+				61E9D3D9173ACB87007A5F55 /* FasTAppDelegate.m in Sources */,
+				61E9D738173AF8E9007A5F55 /* SocketIO.m in Sources */,
+				61E9D739173AF8E9007A5F55 /* SocketIOJSONSerialization.m in Sources */,
+				61E9D73A173AF8E9007A5F55 /* SocketIOPacket.m in Sources */,
+				61E9D73B173AF8E9007A5F55 /* SocketIOTransportWebsocket.m in Sources */,
+				61E9D73C173AF8E9007A5F55 /* SocketIOTransportXHR.m in Sources */,
+				61E9D9A8173AF8EA007A5F55 /* base64.c in Sources */,
+				61E9D9A9173AF8EA007A5F55 /* NSData+SRB64Additions.m in Sources */,
+				61E9D9AA173AF8EA007A5F55 /* SRWebSocket.m in Sources */,
+				61E9DA02173AF9C8007A5F55 /* FasTEvent.m in Sources */,
+				61E9DA03173AF9C8007A5F55 /* FasTEventDate.m in Sources */,
+				61E9DA04173AF9C8007A5F55 /* FasTFormatter.m in Sources */,
+				61E9DA05173AF9C8007A5F55 /* FasTNode.m in Sources */,
+				61E9DA06173AF9C8007A5F55 /* FasTOrder.m in Sources */,
+				61E9DA07173AF9C8007A5F55 /* FasTSeat.m in Sources */,
+				61E9DA08173AF9C8007A5F55 /* FasTSeatingView.m in Sources */,
+				61E9DA09173AF9C8007A5F55 /* FasTSeatView.m in Sources */,
+				61E9DA0A173AF9C8007A5F55 /* FasTTicketPrinter.m in Sources */,
+				61E9DA0B173AF9C8007A5F55 /* FasTTicketType.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		61E9D3D1173ACB87007A5F55 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				61E9D3E5173ACC27007A5F55 /* de */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		61E9D3E0173ACB87007A5F55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-force_flat_namespace";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		61E9D3E1173ACB87007A5F55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = "-force_flat_namespace";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		61E9D3E3173ACB87007A5F55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FasT-retail-checkout/FasT-retail-checkout-Prefix.pch";
+				INFOPLIST_FILE = "FasT-retail-checkout/FasT-retail-checkout-Info.plist";
+				PRODUCT_NAME = "FasT-retail-checkout";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		61E9D3E4173ACB87007A5F55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FasT-retail-checkout/FasT-retail-checkout-Prefix.pch";
+				INFOPLIST_FILE = "FasT-retail-checkout/FasT-retail-checkout-Info.plist";
+				PRODUCT_NAME = "FasT-retail-checkout";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		61E9D3C0173ACB87007A5F55 /* Build configuration list for PBXProject "FasT-retail-checkout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61E9D3E0173ACB87007A5F55 /* Debug */,
+				61E9D3E1173ACB87007A5F55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		61E9D3E2173ACB87007A5F55 /* Build configuration list for PBXNativeTarget "FasT-retail-checkout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61E9D3E3173ACB87007A5F55 /* Debug */,
+				61E9D3E4173ACB87007A5F55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 61E9D3BD173ACB87007A5F55 /* Project object */;
+}
