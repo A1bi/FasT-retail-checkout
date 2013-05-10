@@ -10,6 +10,8 @@
 		6174FA35173C64A10005371F /* FasTUnpaidOrdersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6174FA34173C64A10005371F /* FasTUnpaidOrdersViewController.m */; };
 		6174FA3B173C6A660005371F /* FasTTicket.m in Sources */ = {isa = PBXBuildFile; fileRef = 6174FA3A173C6A660005371F /* FasTTicket.m */; };
 		6174FA3E173C7AF00005371F /* FasTOrdersTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6174FA3D173C7AF00005371F /* FasTOrdersTableCell.m */; };
+		6174FA40173D5EEA0005371F /* FasTOrdersTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6174FA3F173D5EEA0005371F /* FasTOrdersTableCell.xib */; };
+		6174FA43173D6D950005371F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6174FA45173D6D950005371F /* Localizable.strings */; };
 		61E9D3C9173ACB87007A5F55 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61E9D3C8173ACB87007A5F55 /* UIKit.framework */; };
 		61E9D3CB173ACB87007A5F55 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61E9D3CA173ACB87007A5F55 /* Foundation.framework */; };
 		61E9D3CD173ACB87007A5F55 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61E9D3CC173ACB87007A5F55 /* CoreGraphics.framework */; };
@@ -56,6 +58,8 @@
 		6174FA3A173C6A660005371F /* FasTTicket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FasTTicket.m; path = "submodules/FasT-objc-common/FasTTicket.m"; sourceTree = SOURCE_ROOT; };
 		6174FA3C173C7AF00005371F /* FasTOrdersTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FasTOrdersTableCell.h; sourceTree = "<group>"; };
 		6174FA3D173C7AF00005371F /* FasTOrdersTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FasTOrdersTableCell.m; sourceTree = "<group>"; };
+		6174FA3F173D5EEA0005371F /* FasTOrdersTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FasTOrdersTableCell.xib; sourceTree = "<group>"; };
+		6174FA44173D6D950005371F /* de */ = {isa = PBXFileReference; lastKnownFileType = file; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		61E9D3C5173ACB87007A5F55 /* FasT-retail-checkout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FasT-retail-checkout.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		61E9D3C8173ACB87007A5F55 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		61E9D3CA173ACB87007A5F55 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -196,6 +200,7 @@
 				6174FA34173C64A10005371F /* FasTUnpaidOrdersViewController.m */,
 				6174FA3C173C7AF00005371F /* FasTOrdersTableCell.h */,
 				6174FA3D173C7AF00005371F /* FasTOrdersTableCell.m */,
+				6174FA3F173D5EEA0005371F /* FasTOrdersTableCell.xib */,
 			);
 			path = "FasT-retail-checkout";
 			sourceTree = "<group>";
@@ -207,6 +212,7 @@
 				61E9D3D1173ACB87007A5F55 /* InfoPlist.strings */,
 				61E9D3D4173ACB87007A5F55 /* main.m */,
 				61E9D3D6173ACB87007A5F55 /* FasT-retail-checkout-Prefix.pch */,
+				6174FA45173D6D950005371F /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			path = "../FasT-retail-checkout";
@@ -387,6 +393,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				61E9DA13173B036B007A5F55 /* InfoPlist.strings in Resources */,
+				6174FA40173D5EEA0005371F /* FasTOrdersTableCell.xib in Resources */,
+				6174FA43173D6D950005371F /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +444,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		6174FA45173D6D950005371F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6174FA44173D6D950005371F /* de */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		61E9D3D1173ACB87007A5F55 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

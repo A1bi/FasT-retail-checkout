@@ -16,7 +16,7 @@
 
 @end
 
-static NSString *cellIdentifier = @"Cell";
+static NSString *cellIdentifier = @"OrderCell";
 
 @implementation FasTUnpaidOrdersViewController
 
@@ -28,7 +28,7 @@ static NSString *cellIdentifier = @"Cell";
         
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateOrdersWithNotification:) name:@"updateOrders" object:nil];
         
-        [[self tableView] registerClass:[FasTOrdersTableCell class] forCellReuseIdentifier:cellIdentifier];
+        [[self tableView] registerNib:[UINib nibWithNibName:@"FasTOrdersTableCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:cellIdentifier];
     }
     return self;
 }

@@ -11,6 +11,11 @@
 @class FasTOrder;
 
 @interface FasTOrdersTableCell : UITableViewCell
+{
+    IBOutlet UILabel *leftLabel;
+    IBOutlet UILabel *middleLabel;
+    IBOutlet UILabel *rightLabel;
+}
 
 - (void)updateWithOrder:(FasTOrder *)order;
 

@@ -12,19 +12,11 @@
 
 @implementation FasTOrdersTableCell
 
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
-{
-    self = [super initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:reuseIdentifier];
-    if (self) {
-        [self setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
-    }
-    return self;
-}
-
 - (void)updateWithOrder:(FasTOrder *)order
 {
-    [[self textLabel] setText:@"2"];
-    [[self detailTextLabel] setText:[FasTFormatter stringForPrice:[order total]]];
+    [leftLabel setText:[order queueNumber]];
+    [middleLabel setText:[FasTFormatter stringForEventDate:[order created]]];
+    [rightLabel setText:[FasTFormatter stringForPrice:[order total]]];
 }
 
 @end

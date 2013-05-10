@@ -1,0 +1,8 @@
+"eventDateFormat" = "EEEE, dd. MMMM yyyy 'um' HH.mm 'Uhr'";
+"unknownErrorOccurred" = "Es ist ein Fehler aufgetreten";
+"ticketNumber" = "Ticket: %@";
+"orderNumber" = "Order: %@";
+"blockName" = "Block: %@";
+"rowNumber" = "Reihe: %@";
+"seatNumber" = "Sitz: %@";
+"websiteUrl" = "www.theater-kaisersesch.de";
