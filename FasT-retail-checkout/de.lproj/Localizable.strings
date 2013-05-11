@@ -6,3 +6,11 @@
 "rowNumber" = "Reihe: %@";
 "seatNumber" = "Sitz: %@";
 "websiteUrl" = "www.theater-kaisersesch.de";
+"unpaidOrders" = "Unbezahlte Bestellungen";
+"orderWithNumber" = "Bestellung %@";
+"general" = "Allgemein";
+"order" = "Order";
+"orderedAt" = "bestellt am";
+"details" = "Details";
+"tickets" = "Tickets";
+"totalPrice" = "Gesamtpreis";

@@ -28,7 +28,8 @@
     UITabBarController *tbc = [[[UITabBarController alloc] init] autorelease];
     [self.window setRootViewController:tbc];
     
-    [tbc setViewControllers:@[ [[FasTUnpaidOrdersViewController alloc] init] ]];
+    UINavigationController *nvc = [[[UINavigationController alloc] initWithRootViewController:[[[FasTUnpaidOrdersViewController alloc] init] autorelease]] autorelease];
+    [tbc setViewControllers:@[nvc]];
     
     return YES;
 }

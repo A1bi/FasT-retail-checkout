@@ -9,6 +9,7 @@
 #import "FasTUnpaidOrdersViewController.h"
 #import "FasTApi.h"
 #import "FasTOrdersTableCell.h"
+#import "FasTOrderViewController.h"
 
 @interface FasTUnpaidOrdersViewController ()
 
@@ -24,7 +25,7 @@ static NSString *cellIdentifier = @"OrderCell";
 {
     self = [super initWithStyle:style];
     if (self) {
-        [[self tabBarItem] setTitle:@"Unbezahlte Bestellungen"];
+        [self setTitle:NSLocalizedStringByKey(@"unpaidOrders")];
         
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateOrdersWithNotification:) name:@"updateOrders" object:nil];
         
@@ -69,7 +70,8 @@ static NSString *cellIdentifier = @"OrderCell";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
+    FasTOrderViewController *ovc = [[[FasTOrderViewController alloc] initWithOrder:[orders objectAtIndex:[indexPath row]]] autorelease];
+    [[self navigationController] pushViewController:ovc animated:YES];
 }
 
 #pragma mark - class methods
@@ -82,7 +84,7 @@ static NSString *cellIdentifier = @"OrderCell";
     [orders release];
     orders = [[allOrders filteredArrayUsingPredicate:predicate] retain];
     
-    [[self tabBarItem] setBadgeValue:[NSString stringWithFormat:@"%i", [orders count]]];
+    [[[self navigationController] tabBarItem] setBadgeValue:[NSString stringWithFormat:@"%i", [orders count]]];
     
     [[self tableView] reloadData];
 }
