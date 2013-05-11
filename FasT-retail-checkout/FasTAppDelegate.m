@@ -8,7 +8,7 @@
 
 #import "FasTAppDelegate.h"
 #import "FasTApi.h"
-#import "FasTUnpaidOrdersViewController.h"
+#import "FasTOrdersTableViewController.h"
 
 @implementation FasTAppDelegate
 
@@ -28,8 +28,13 @@
     UITabBarController *tbc = [[[UITabBarController alloc] init] autorelease];
     [self.window setRootViewController:tbc];
     
-    UINavigationController *nvc = [[[UINavigationController alloc] initWithRootViewController:[[[FasTUnpaidOrdersViewController alloc] init] autorelease]] autorelease];
-    [tbc setViewControllers:@[nvc]];
+    FasTOrdersTableViewController *otvc = [[[FasTOrdersTableViewController alloc] initWithType:FasTOrdersTableViewControllerUnpaid] autorelease];
+    UINavigationController *nvc = [[[UINavigationController alloc] initWithRootViewController:otvc] autorelease];
+    
+    otvc = [[[FasTOrdersTableViewController alloc] initWithType:FasTOrdersTableViewControllerRecent] autorelease];
+    UINavigationController *nvc2 = [[[UINavigationController alloc] initWithRootViewController:otvc] autorelease];
+
+    [tbc setViewControllers:@[nvc, nvc2]];
     
     return YES;
 }

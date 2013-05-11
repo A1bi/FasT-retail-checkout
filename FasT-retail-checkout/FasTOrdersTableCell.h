@@ -17,6 +17,6 @@
     IBOutlet UILabel *rightLabel;
 }
 
-- (void)updateWithOrder:(FasTOrder *)order;
+- (void)updateWithOrder:(FasTOrder *)order withRecentStyle:(BOOL)recent;
 
 @end

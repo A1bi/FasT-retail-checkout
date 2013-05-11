@@ -6,12 +6,12 @@
 //  Copyright (c) 2013 Albisigns. All rights reserved.
 //
 
-#import "FasTUnpaidOrdersViewController.h"
+#import "FasTOrdersTableViewController.h"
 #import "FasTApi.h"
 #import "FasTOrdersTableCell.h"
 #import "FasTOrderViewController.h"
 
-@interface FasTUnpaidOrdersViewController ()
+@interface FasTOrdersTableViewController ()
 
 - (void)updateOrdersWithNotification:(NSNotification *)note;
 
@@ -19,13 +19,16 @@
 
 static NSString *cellIdentifier = @"OrderCell";
 
-@implementation FasTUnpaidOrdersViewController
+@implementation FasTOrdersTableViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
+- (id)initWithType:(FasTOrdersTableViewControllerType)t
 {
-    self = [super initWithStyle:style];
+    self = [super initWithStyle:UITableViewStylePlain];
     if (self) {
-        [self setTitle:NSLocalizedStringByKey(@"unpaidOrders")];
+        type = t;
+        
+        NSString *titleKey = (type == FasTOrdersTableViewControllerUnpaid) ? @"unpaidOrders" : @"recentOrders";
+        [self setTitle:NSLocalizedStringByKey(titleKey)];
         
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateOrdersWithNotification:) name:@"updateOrders" object:nil];
         
@@ -61,7 +64,7 @@ static NSString *cellIdentifier = @"OrderCell";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     FasTOrdersTableCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
-    [cell updateWithOrder:orders[[indexPath row]]];
+    [cell updateWithOrder:orders[[indexPath row]] withRecentStyle:(type == FasTOrdersTableViewControllerRecent)];
     
     return cell;
 }
@@ -78,11 +81,17 @@ static NSString *cellIdentifier = @"OrderCell";
 
 - (void)updateOrdersWithNotification:(NSNotification *)note
 {
+    [orders release];
     NSArray *allOrders = [note userInfo][@"orders"];
     
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"paid == NO"];
-    [orders release];
-    orders = [[allOrders filteredArrayUsingPredicate:predicate] retain];
+    if (type == FasTOrdersTableViewControllerUnpaid) {
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"paid == NO"];
+        orders = [allOrders filteredArrayUsingPredicate:predicate];
+    } else {
+        orders = allOrders;
+    }
+    
+    [orders retain];
     
     [[[self navigationController] tabBarItem] setBadgeValue:[NSString stringWithFormat:@"%i", [orders count]]];
     

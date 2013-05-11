@@ -7,6 +7,7 @@
 "seatNumber" = "Sitz: %@";
 "websiteUrl" = "www.theater-kaisersesch.de";
 "unpaidOrders" = "Unbezahlte Bestellungen";
+"recentOrders" = "Letzte Bestellungen";
 "orderWithNumber" = "Bestellung %@";
 "general" = "Allgemein";
 "order" = "Order";
