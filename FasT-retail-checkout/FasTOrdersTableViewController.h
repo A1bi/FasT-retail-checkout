@@ -13,10 +13,13 @@ typedef enum {
     FasTOrdersTableViewControllerRecent
 } FasTOrdersTableViewControllerType;
 
-@interface FasTOrdersTableViewController : UITableViewController
+@interface FasTOrdersTableViewController : UITableViewController <UISearchDisplayDelegate>
 {
     NSArray *orders;
+    NSArray *foundOrders;
+    NSArray *tableOrders;
     FasTOrdersTableViewControllerType type;
+    UISearchDisplayController *searchDisplay;
 }
 
 - (id)initWithType:(FasTOrdersTableViewControllerType)type;

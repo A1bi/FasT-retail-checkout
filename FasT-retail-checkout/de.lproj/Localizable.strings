@@ -1,10 +1,9 @@
 "eventDateFormat" = "EEEE, dd. MMMM yyyy 'um' HH.mm 'Uhr'";
 "unknownErrorOccurred" = "Es ist ein Fehler aufgetreten";
-"ticketNumber" = "Ticket: %@";
-"orderNumber" = "Order: %@";
-"blockName" = "Block: %@";
-"rowNumber" = "Reihe: %@";
-"seatNumber" = "Sitz: %@";
+"ticket" = "Ticket";
+"block" = "Block";
+"row" = "Reihe";
+"seat" = "Sitz";
 "websiteUrl" = "www.theater-kaisersesch.de";
 "unpaidOrders" = "Unbezahlte Bestellungen";
 "recentOrders" = "Letzte Bestellungen";
@@ -15,3 +14,4 @@
 "details" = "Details";
 "tickets" = "Tickets";
 "totalPrice" = "Gesamtpreis";
+"orderNumber" = "Order-Nummer";

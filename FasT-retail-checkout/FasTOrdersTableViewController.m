@@ -14,6 +14,7 @@
 @interface FasTOrdersTableViewController ()
 
 - (void)updateOrdersWithNotification:(NSNotification *)note;
+- (void)registerCellNibForTableView:(UITableView *)tableView;
 
 @end
 
@@ -32,7 +33,7 @@ static NSString *cellIdentifier = @"OrderCell";
         
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateOrdersWithNotification:) name:@"updateOrders" object:nil];
         
-        [[self tableView] registerNib:[UINib nibWithNibName:@"FasTOrdersTableCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:cellIdentifier];
+        [self registerCellNibForTableView:[self tableView]];
     }
     return self;
 }
@@ -42,11 +43,30 @@ static NSString *cellIdentifier = @"OrderCell";
     [super viewDidLoad];
     
     [[FasTApi defaultApi] getOrders];
+    
+    if (type == FasTOrdersTableViewControllerRecent) {
+        UISearchBar *searchBar = [[[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 44)] autorelease];
+        [searchBar setKeyboardType:UIKeyboardTypeDecimalPad];
+        [searchBar setPlaceholder:NSLocalizedStringByKey(@"orderNumber")];
+        [[self tableView] setTableHeaderView:searchBar];
+        
+        searchDisplay = [[UISearchDisplayController alloc] initWithSearchBar:searchBar contentsController:self];
+        [searchDisplay setDelegate:self];
+        [searchDisplay setSearchResultsDataSource:self];
+    }
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+}
+
+- (void)dealloc
+{
+    [orders release];
+    [foundOrders release];
+    [searchDisplay release];
+    [super dealloc];
 }
 
 #pragma mark - Table view data source
@@ -58,13 +78,13 @@ static NSString *cellIdentifier = @"OrderCell";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [orders count];
+    return [tableOrders count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     FasTOrdersTableCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
-    [cell updateWithOrder:orders[[indexPath row]] withRecentStyle:(type == FasTOrdersTableViewControllerRecent)];
+    [cell updateWithOrder:tableOrders[[indexPath row]] withRecentStyle:(type == FasTOrdersTableViewControllerRecent)];
     
     return cell;
 }
@@ -75,6 +95,28 @@ static NSString *cellIdentifier = @"OrderCell";
 {
     FasTOrderViewController *ovc = [[[FasTOrderViewController alloc] initWithOrder:[orders objectAtIndex:[indexPath row]]] autorelease];
     [[self navigationController] pushViewController:ovc animated:YES];
+}
+
+#pragma mark search display delegate
+
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
+{
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"number beginswith %@", searchString];
+    [foundOrders release];
+    tableOrders = foundOrders = [[orders filteredArrayUsingPredicate:predicate] retain];
+    
+    return YES;
+}
+
+- (void)searchDisplayControllerWillEndSearch:(UISearchDisplayController *)controller
+{
+    tableOrders = orders;
+}
+
+- (void)searchDisplayController:(UISearchDisplayController *)controller didLoadSearchResultsTableView:(UITableView *)tableView
+{
+    [self registerCellNibForTableView:tableView];
+    [tableView setDelegate:self];
 }
 
 #pragma mark - class methods
@@ -90,12 +132,16 @@ static NSString *cellIdentifier = @"OrderCell";
     } else {
         orders = allOrders;
     }
-    
-    [orders retain];
+    tableOrders = [orders retain];
     
     [[[self navigationController] tabBarItem] setBadgeValue:[NSString stringWithFormat:@"%i", [orders count]]];
     
     [[self tableView] reloadData];
+}
+
+- (void)registerCellNibForTableView:(UITableView *)tableView
+{
+    [tableView registerNib:[UINib nibWithNibName:@"FasTOrdersTableCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:cellIdentifier];
 }
 
 @end

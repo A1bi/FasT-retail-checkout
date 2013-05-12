@@ -14,8 +14,8 @@
 
 - (void)updateWithOrder:(FasTOrder *)order withRecentStyle:(BOOL)recent
 {
-    [leftLabel setText:[order queueNumber]];
-    [middleLabel setText:[NSDateFormatter localizedStringFromDate:[order created] dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterMediumStyle]];
+    [leftLabel setText:(recent) ? [order number] : [order queueNumber]];
+    [middleLabel setText:[NSDateFormatter localizedStringFromDate:[order created] dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterShortStyle]];
     [rightLabel setText:[FasTFormatter stringForPrice:[order total]]];
     
     if (recent) {
