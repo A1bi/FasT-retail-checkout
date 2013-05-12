@@ -69,7 +69,7 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    return [sections objectAtIndex:section][@"title"];
+    return sections[section][@"title"];
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
@@ -97,7 +97,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [[sections objectAtIndex:section] count];
+    return [sections[section] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -108,7 +108,7 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellIdentifier] autorelease];
     }
     
-    NSArray *rows = [sections objectAtIndex:[indexPath section]][@"rows"][[indexPath row]];
+    NSArray *rows = sections[[indexPath section]][@"rows"][[indexPath row]];
     [[cell textLabel] setText:rows[0]];
     [[cell detailTextLabel] setText:rows[1]];
     

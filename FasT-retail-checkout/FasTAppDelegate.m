@@ -14,6 +14,7 @@
 
 - (void)dealloc
 {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
     [_window release];
     [super dealloc];
 }
@@ -23,7 +24,13 @@
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     [self.window makeKeyAndVisible];
     
-    [[FasTApi defaultApi] initWithClientType:@"retail-checkout"];
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
+    
+    FasTApi *api = [FasTApi defaultApi];
+    [api initWithClientType:@"retail-checkout"];
+    [[NSNotificationCenter defaultCenter] addObserverForName:@"ready" object:api queue:nil usingBlock:^(NSNotification *note) {
+        [api getOrders];
+    }];
     
     UITabBarController *tbc = [[[UITabBarController alloc] init] autorelease];
     [self.window setRootViewController:tbc];

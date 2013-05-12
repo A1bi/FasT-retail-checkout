@@ -10,6 +10,7 @@
 #import "FasTApi.h"
 #import "FasTOrdersTableCell.h"
 #import "FasTOrderViewController.h"
+#import "FasTOrder.h"
 
 @interface FasTOrdersTableViewController ()
 
@@ -42,8 +43,6 @@ static NSString *cellIdentifier = @"OrderCell";
 {
     [super viewDidLoad];
     
-    [[FasTApi defaultApi] getOrders];
-    
     if (type == FasTOrdersTableViewControllerRecent) {
         UISearchBar *searchBar = [[[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 44)] autorelease];
         [searchBar setKeyboardType:UIKeyboardTypeDecimalPad];
@@ -66,6 +65,7 @@ static NSString *cellIdentifier = @"OrderCell";
     [orders release];
     [foundOrders release];
     [searchDisplay release];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
     [super dealloc];
 }
 
@@ -93,7 +93,7 @@ static NSString *cellIdentifier = @"OrderCell";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    FasTOrderViewController *ovc = [[[FasTOrderViewController alloc] initWithOrder:[orders objectAtIndex:[indexPath row]]] autorelease];
+    FasTOrderViewController *ovc = [[[FasTOrderViewController alloc] initWithOrder:orders[[indexPath row]]] autorelease];
     [[self navigationController] pushViewController:ovc animated:YES];
 }
 
@@ -126,13 +126,20 @@ static NSString *cellIdentifier = @"OrderCell";
     [orders release];
     NSArray *allOrders = [note userInfo][@"orders"];
     
+    NSComparator comparator;
     if (type == FasTOrdersTableViewControllerUnpaid) {
         NSPredicate *predicate = [NSPredicate predicateWithFormat:@"paid == NO"];
         orders = [allOrders filteredArrayUsingPredicate:predicate];
+        comparator = ^NSComparisonResult(FasTOrder *obj1, FasTOrder *obj2) {
+            return [[obj1 queueNumber] compare:[obj2 queueNumber] options:NSNumericSearch];
+        };
     } else {
         orders = allOrders;
+        comparator = ^NSComparisonResult(FasTOrder *obj1, FasTOrder *obj2) {
+            return [[obj1 created] compare:[obj2 created]] * -1;
+        };
     }
-    tableOrders = [orders retain];
+    tableOrders = orders = [[orders sortedArrayUsingComparator:comparator] retain];
     
     [[[self navigationController] tabBarItem] setBadgeValue:[NSString stringWithFormat:@"%i", [orders count]]];
     
