@@ -15,3 +15,7 @@
 "tickets" = "Tickets";
 "totalPrice" = "Gesamtpreis";
 "orderNumber" = "Order-Nummer";
+"yes" = "ja";
+"no" = "nein";
+"reprintTickets" = "Tickets erneut drucken";
+"reprintTicketsConfirmation" = "Möchten Sie die Tickets wirklich noch einmal drucken?";

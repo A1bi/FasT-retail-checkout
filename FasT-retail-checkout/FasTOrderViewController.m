@@ -10,10 +10,13 @@
 #import "FasTOrder.h"
 #import "FasTFormatter.h"
 #import "FasTApi.h"
+#import "FasTTicketPrinter.h"
 
 @interface FasTOrderViewController ()
 
 - (void)markAsPaid;
+- (void)tappedPriceButton;
+- (void)printTickets;
 
 @end
 
@@ -81,10 +84,10 @@
     UILabel *priceLabel = (UILabel *)[view viewWithTag:1];
     [priceLabel setText:[FasTFormatter stringForPrice:[order total]]];
     UIButton *markBtn = (UIButton *)[view viewWithTag:2];
-    [markBtn addTarget:self action:@selector(markAsPaid) forControlEvents:UIControlEventTouchUpInside];
+    [markBtn addTarget:self action:@selector(tappedPriceButton) forControlEvents:UIControlEventTouchUpInside];
     if ([order paid]) {
         [priceLabel setTextColor:[UIColor greenColor]];
-        [markBtn setHidden:YES];
+        [markBtn setTitle:NSLocalizedStringByKey(@"reprintTickets") forState:UIControlStateNormal];
     }
          
     return view;
@@ -120,9 +123,33 @@
     [[FasTApi defaultApi] markOrderAsPaid:order withCallback:^(NSDictionary *response) {
         if ([response[@"ok"] boolValue]) {
             [order setPaid:YES];
+            [self printTickets];
             [[self tableView] reloadData];
         }
     }];
+}
+
+- (void)tappedPriceButton
+{
+    if ([order paid]) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedStringByKey(@"reprintTickets") message:NSLocalizedStringByKey(@"reprintTicketsConfirmation") delegate:self cancelButtonTitle:NSLocalizedStringByKey(@"no") otherButtonTitles:NSLocalizedStringByKey(@"yes"), nil];
+        [alert show];
+        
+    } else {
+        [self markAsPaid];
+    }
+}
+
+- (void)printTickets
+{
+    [[FasTTicketPrinter sharedPrinter] printTicketsForOrder:order];
+}
+
+#pragma mark alert delegate
+
+- (void)alertView:(UIAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 1) [self printTickets];
 }
 
 @end

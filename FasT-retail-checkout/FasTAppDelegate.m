@@ -8,6 +8,7 @@
 
 #import "FasTAppDelegate.h"
 #import "FasTApi.h"
+#import "FasTTicketPrinter.h"
 #import "FasTOrdersTableViewController.h"
 
 @implementation FasTAppDelegate
@@ -24,13 +25,17 @@
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     [self.window makeKeyAndVisible];
     
-    [[UIApplication sharedApplication] setStatusBarHidden:YES];
-    
+
     FasTApi *api = [FasTApi defaultApi];
     [api initWithClientType:@"retail-checkout"];
     [[NSNotificationCenter defaultCenter] addObserverForName:@"ready" object:api queue:nil usingBlock:^(NSNotification *note) {
         [api getOrders];
     }];
+    
+    [FasTTicketPrinter sharedPrinter];
+    
+    
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
     
     UITabBarController *tbc = [[[UITabBarController alloc] init] autorelease];
     [self.window setRootViewController:tbc];

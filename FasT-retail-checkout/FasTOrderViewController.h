@@ -10,7 +10,7 @@
 
 @class FasTOrder;
 
-@interface FasTOrderViewController : UITableViewController
+@interface FasTOrderViewController : UITableViewController <UIAlertViewDelegate>
 {
     NSArray *sections;
     FasTOrder *order;
