@@ -14,6 +14,7 @@
 		6174FA3E173C7AF00005371F /* FasTOrdersTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6174FA3D173C7AF00005371F /* FasTOrdersTableCell.m */; };
 		6174FA40173D5EEA0005371F /* FasTOrdersTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6174FA3F173D5EEA0005371F /* FasTOrdersTableCell.xib */; };
 		6174FA43173D6D950005371F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6174FA45173D6D950005371F /* Localizable.strings */; };
+		6175CBE11743D5BD0095B806 /* FasTBarcode3of9.m in Sources */ = {isa = PBXBuildFile; fileRef = 6175CBE01743D5BD0095B806 /* FasTBarcode3of9.m */; };
 		61E9D3C9173ACB87007A5F55 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61E9D3C8173ACB87007A5F55 /* UIKit.framework */; };
 		61E9D3CB173ACB87007A5F55 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61E9D3CA173ACB87007A5F55 /* Foundation.framework */; };
 		61E9D3CD173ACB87007A5F55 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61E9D3CC173ACB87007A5F55 /* CoreGraphics.framework */; };
@@ -65,6 +66,8 @@
 		6174FA3D173C7AF00005371F /* FasTOrdersTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FasTOrdersTableCell.m; sourceTree = "<group>"; };
 		6174FA3F173D5EEA0005371F /* FasTOrdersTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FasTOrdersTableCell.xib; sourceTree = "<group>"; };
 		6174FA44173D6D950005371F /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6175CBDF1743D5BD0095B806 /* FasTBarcode3of9.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FasTBarcode3of9.h; sourceTree = "<group>"; };
+		6175CBE01743D5BD0095B806 /* FasTBarcode3of9.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FasTBarcode3of9.m; sourceTree = "<group>"; };
 		61E9D3C5173ACB87007A5F55 /* FasT-retail-checkout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FasT-retail-checkout.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		61E9D3C8173ACB87007A5F55 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		61E9D3CA173ACB87007A5F55 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -97,11 +100,11 @@
 		61E9D9EA173AF985007A5F55 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		61E9D9EC173AF992007A5F55 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		61E9D9EE173AF9C8007A5F55 /* FasTEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FasTEvent.h; path = "submodules/FasT-objc-common/FasTEvent.h"; sourceTree = SOURCE_ROOT; };
-		61E9D9EF173AF9C8007A5F55 /* FasTEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FasTEvent.m; path = "submodules/FasT-objc-common/FasTEvent.m"; sourceTree = SOURCE_ROOT; };
+		61E9D9EF173AF9C8007A5F55 /* FasTEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FasTEvent.m; sourceTree = "<group>"; };
 		61E9D9F0173AF9C8007A5F55 /* FasTEventDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FasTEventDate.h; path = "submodules/FasT-objc-common/FasTEventDate.h"; sourceTree = SOURCE_ROOT; };
 		61E9D9F1173AF9C8007A5F55 /* FasTEventDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FasTEventDate.m; path = "submodules/FasT-objc-common/FasTEventDate.m"; sourceTree = SOURCE_ROOT; };
 		61E9D9F2173AF9C8007A5F55 /* FasTFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FasTFormatter.h; path = "submodules/FasT-objc-common/FasTFormatter.h"; sourceTree = SOURCE_ROOT; };
-		61E9D9F3173AF9C8007A5F55 /* FasTFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FasTFormatter.m; path = "submodules/FasT-objc-common/FasTFormatter.m"; sourceTree = SOURCE_ROOT; };
+		61E9D9F3173AF9C8007A5F55 /* FasTFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FasTFormatter.m; sourceTree = "<group>"; };
 		61E9D9F6173AF9C8007A5F55 /* FasTOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FasTOrder.h; path = "submodules/FasT-objc-common/FasTOrder.h"; sourceTree = SOURCE_ROOT; };
 		61E9D9F7173AF9C8007A5F55 /* FasTOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FasTOrder.m; path = "submodules/FasT-objc-common/FasTOrder.m"; sourceTree = SOURCE_ROOT; };
 		61E9D9F8173AF9C8007A5F55 /* FasTSeat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FasTSeat.h; path = "submodules/FasT-objc-common/FasTSeat.h"; sourceTree = SOURCE_ROOT; };
@@ -284,10 +287,13 @@
 				61E9DA01173AF9C8007A5F55 /* FasTTicketType.m */,
 				61E9D9FE173AF9C8007A5F55 /* FasTTicketPrinter.h */,
 				61E9D9FF173AF9C8007A5F55 /* FasTTicketPrinter.m */,
+				6175CBDF1743D5BD0095B806 /* FasTBarcode3of9.h */,
+				6175CBE01743D5BD0095B806 /* FasTBarcode3of9.m */,
 				61E9D9F2173AF9C8007A5F55 /* FasTFormatter.h */,
 				61E9D9F3173AF9C8007A5F55 /* FasTFormatter.m */,
 			);
 			name = "FasT-objc-common";
+			path = "../submodules/FasT-objc-common";
 			sourceTree = "<group>";
 		};
 		61E9DA0D173AFA54007A5F55 /* PrintKit */ = {
@@ -448,6 +454,7 @@
 				6174FA3B173C6A660005371F /* FasTTicket.m in Sources */,
 				6174FA3E173C7AF00005371F /* FasTOrdersTableCell.m in Sources */,
 				61184942173D9498000EEE69 /* FasTOrderViewController.m in Sources */,
+				6175CBE11743D5BD0095B806 /* FasTBarcode3of9.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
