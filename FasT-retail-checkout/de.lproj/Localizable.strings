@@ -19,3 +19,7 @@
 "no" = "nein";
 "reprintTickets" = "Tickets erneut drucken";
 "reprintTicketsConfirmation" = "Möchten Sie die Tickets wirklich noch einmal drucken?";
+"printer" = "Drucker";
+"selectPrinter" = "Drucker auswählen";
+"select" = "auswählen";
+"settings" = "Einstellungen";

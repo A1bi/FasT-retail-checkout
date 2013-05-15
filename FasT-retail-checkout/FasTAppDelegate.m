@@ -10,6 +10,7 @@
 #import "FasTApi.h"
 #import "FasTTicketPrinter.h"
 #import "FasTOrdersTableViewController.h"
+#import "FasTSettingsTableViewController.h"
 
 @implementation FasTAppDelegate
 
@@ -40,13 +41,16 @@
     UITabBarController *tbc = [[[UITabBarController alloc] init] autorelease];
     [self.window setRootViewController:tbc];
     
-    FasTOrdersTableViewController *otvc = [[[FasTOrdersTableViewController alloc] initWithType:FasTOrdersTableViewControllerUnpaid] autorelease];
-    UINavigationController *nvc = [[[UINavigationController alloc] initWithRootViewController:otvc] autorelease];
+    UIViewController *vc = [[[FasTOrdersTableViewController alloc] initWithType:FasTOrdersTableViewControllerUnpaid] autorelease];
+    UINavigationController *nvc = [[[UINavigationController alloc] initWithRootViewController:vc] autorelease];
     
-    otvc = [[[FasTOrdersTableViewController alloc] initWithType:FasTOrdersTableViewControllerRecent] autorelease];
-    UINavigationController *nvc2 = [[[UINavigationController alloc] initWithRootViewController:otvc] autorelease];
+    vc = [[[FasTOrdersTableViewController alloc] initWithType:FasTOrdersTableViewControllerRecent] autorelease];
+    UINavigationController *nvc2 = [[[UINavigationController alloc] initWithRootViewController:vc] autorelease];
+    
+    vc = [[[FasTSettingsTableViewController alloc] init] autorelease];
+    UINavigationController *nvc3 = [[UINavigationController alloc] initWithRootViewController:vc];
 
-    [tbc setViewControllers:@[nvc, nvc2]];
+    [tbc setViewControllers:@[nvc, nvc2, nvc3]];
     
     return YES;
 }

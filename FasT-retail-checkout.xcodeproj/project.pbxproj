@@ -15,6 +15,9 @@
 		6174FA40173D5EEA0005371F /* FasTOrdersTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6174FA3F173D5EEA0005371F /* FasTOrdersTableCell.xib */; };
 		6174FA43173D6D950005371F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6174FA45173D6D950005371F /* Localizable.strings */; };
 		6175CBE11743D5BD0095B806 /* FasTBarcode3of9.m in Sources */ = {isa = PBXBuildFile; fileRef = 6175CBE01743D5BD0095B806 /* FasTBarcode3of9.m */; };
+		6175CBE41743E5010095B806 /* FasTSettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6175CBE31743E5000095B806 /* FasTSettingsTableViewController.m */; };
+		6175CBE71743E7C40095B806 /* FasTPrintersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6175CBE61743E7C40095B806 /* FasTPrintersTableViewController.m */; };
+		6175CBEA174413AC0095B806 /* FasTConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 6175CBE9174413AC0095B806 /* FasTConstants.m */; };
 		61E9D3C9173ACB87007A5F55 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61E9D3C8173ACB87007A5F55 /* UIKit.framework */; };
 		61E9D3CB173ACB87007A5F55 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61E9D3CA173ACB87007A5F55 /* Foundation.framework */; };
 		61E9D3CD173ACB87007A5F55 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61E9D3CC173ACB87007A5F55 /* CoreGraphics.framework */; };
@@ -68,6 +71,12 @@
 		6174FA44173D6D950005371F /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6175CBDF1743D5BD0095B806 /* FasTBarcode3of9.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FasTBarcode3of9.h; sourceTree = "<group>"; };
 		6175CBE01743D5BD0095B806 /* FasTBarcode3of9.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FasTBarcode3of9.m; sourceTree = "<group>"; };
+		6175CBE21743E5000095B806 /* FasTSettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FasTSettingsTableViewController.h; sourceTree = "<group>"; };
+		6175CBE31743E5000095B806 /* FasTSettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FasTSettingsTableViewController.m; sourceTree = "<group>"; };
+		6175CBE51743E7C40095B806 /* FasTPrintersTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FasTPrintersTableViewController.h; sourceTree = "<group>"; };
+		6175CBE61743E7C40095B806 /* FasTPrintersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FasTPrintersTableViewController.m; sourceTree = "<group>"; };
+		6175CBE8174413AC0095B806 /* FasTConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FasTConstants.h; sourceTree = "<group>"; };
+		6175CBE9174413AC0095B806 /* FasTConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FasTConstants.m; sourceTree = "<group>"; };
 		61E9D3C5173ACB87007A5F55 /* FasT-retail-checkout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FasT-retail-checkout.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		61E9D3C8173ACB87007A5F55 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		61E9D3CA173ACB87007A5F55 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -123,7 +132,7 @@
 		61E9DA11173AFA54007A5F55 /* PKPrinterBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKPrinterBrowser.h; sourceTree = "<group>"; };
 		61E9DA12173AFA54007A5F55 /* PKPrintSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKPrintSettings.h; sourceTree = "<group>"; };
 		61E9DA3C173C5E01007A5F55 /* FasTApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FasTApi.h; path = "submodules/FasT-objc-common/FasTApi.h"; sourceTree = SOURCE_ROOT; };
-		61E9DA3D173C5E01007A5F55 /* FasTApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FasTApi.m; path = "submodules/FasT-objc-common/FasTApi.m"; sourceTree = SOURCE_ROOT; };
+		61E9DA3D173C5E01007A5F55 /* FasTApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FasTApi.m; sourceTree = "<group>"; };
 		61E9DA41173C5E1A007A5F55 /* NSAlert+MKNetworkKitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAlert+MKNetworkKitAdditions.h"; sourceTree = "<group>"; };
 		61E9DA42173C5E1A007A5F55 /* NSAlert+MKNetworkKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAlert+MKNetworkKitAdditions.m"; sourceTree = "<group>"; };
 		61E9DA43173C5E1A007A5F55 /* NSData+MKBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+MKBase64.h"; sourceTree = "<group>"; };
@@ -202,6 +211,8 @@
 			children = (
 				61E9D3D7173ACB87007A5F55 /* FasTAppDelegate.h */,
 				61E9D3D8173ACB87007A5F55 /* FasTAppDelegate.m */,
+				6175CBE8174413AC0095B806 /* FasTConstants.h */,
+				6175CBE9174413AC0095B806 /* FasTConstants.m */,
 				61E9D3CF173ACB87007A5F55 /* Supporting Files */,
 				61E9DA0C173AF9D5007A5F55 /* FasT-objc-common */,
 				6174FA33173C64A10005371F /* FasTOrdersTableViewController.h */,
@@ -212,6 +223,8 @@
 				61184940173D9498000EEE69 /* FasTOrderViewController.h */,
 				61184941173D9498000EEE69 /* FasTOrderViewController.m */,
 				6109F1BA173E5A5800F4AB2C /* FasTOrderPriceView.xib */,
+				6175CBE21743E5000095B806 /* FasTSettingsTableViewController.h */,
+				6175CBE31743E5000095B806 /* FasTSettingsTableViewController.m */,
 			);
 			path = "FasT-retail-checkout";
 			sourceTree = "<group>";
@@ -291,6 +304,8 @@
 				6175CBE01743D5BD0095B806 /* FasTBarcode3of9.m */,
 				61E9D9F2173AF9C8007A5F55 /* FasTFormatter.h */,
 				61E9D9F3173AF9C8007A5F55 /* FasTFormatter.m */,
+				6175CBE51743E7C40095B806 /* FasTPrintersTableViewController.h */,
+				6175CBE61743E7C40095B806 /* FasTPrintersTableViewController.m */,
 			);
 			name = "FasT-objc-common";
 			path = "../submodules/FasT-objc-common";
@@ -455,6 +470,9 @@
 				6174FA3E173C7AF00005371F /* FasTOrdersTableCell.m in Sources */,
 				61184942173D9498000EEE69 /* FasTOrderViewController.m in Sources */,
 				6175CBE11743D5BD0095B806 /* FasTBarcode3of9.m in Sources */,
+				6175CBE41743E5010095B806 /* FasTSettingsTableViewController.m in Sources */,
+				6175CBE71743E7C40095B806 /* FasTPrintersTableViewController.m in Sources */,
+				6175CBEA174413AC0095B806 /* FasTConstants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

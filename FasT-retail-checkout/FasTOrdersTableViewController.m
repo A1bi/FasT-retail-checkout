@@ -141,7 +141,9 @@ static NSString *cellIdentifier = @"OrderCell";
     }
     tableOrders = orders = [[orders sortedArrayUsingComparator:comparator] retain];
     
-    [[[self navigationController] tabBarItem] setBadgeValue:[NSString stringWithFormat:@"%i", [orders count]]];
+    NSInteger ordersCount = [orders count];
+    NSString *badgeValue = (ordersCount > 0) ? [NSString stringWithFormat:@"%i", ordersCount] : nil;
+    [[[self navigationController] tabBarItem] setBadgeValue:badgeValue];
     
     [[self tableView] reloadData];
 }

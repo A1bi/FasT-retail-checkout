@@ -6,6 +6,8 @@
 #include <netdb.h>
 #import <SystemConfiguration/SCNetworkReachability.h>
 
+@class PKPrintSettings;
+
 @interface PKPrinter : NSObject
 {
     NSString *name;
