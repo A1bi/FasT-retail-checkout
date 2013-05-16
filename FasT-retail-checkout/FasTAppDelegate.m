@@ -29,7 +29,7 @@
 
     FasTApi *api = [FasTApi defaultApi];
     [api initWithClientType:@"retail-checkout"];
-    [[NSNotificationCenter defaultCenter] addObserverForName:@"ready" object:api queue:nil usingBlock:^(NSNotification *note) {
+    [[NSNotificationCenter defaultCenter] addObserverForName:FasTApiIsReadyNotification object:api queue:nil usingBlock:^(NSNotification *note) {
         [api getOrders];
     }];
     
@@ -48,7 +48,7 @@
     UINavigationController *nvc2 = [[[UINavigationController alloc] initWithRootViewController:vc] autorelease];
     
     vc = [[[FasTSettingsTableViewController alloc] init] autorelease];
-    UINavigationController *nvc3 = [[UINavigationController alloc] initWithRootViewController:vc];
+    UINavigationController *nvc3 = [[[UINavigationController alloc] initWithRootViewController:vc] autorelease];
 
     [tbc setViewControllers:@[nvc, nvc2, nvc3]];
     

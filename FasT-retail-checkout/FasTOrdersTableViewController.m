@@ -32,7 +32,7 @@ static NSString *cellIdentifier = @"OrderCell";
         NSString *titleKey = (type == FasTOrdersTableViewControllerUnpaid) ? @"unpaidOrders" : @"recentOrders";
         [self setTitle:NSLocalizedStringByKey(titleKey)];
         
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateOrdersWithNotification:) name:@"updateOrders" object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateOrdersWithNotification:) name:FasTApiUpdatedOrdersNotification object:nil];
         
         [self registerCellNibForTableView:[self tableView]];
     }
