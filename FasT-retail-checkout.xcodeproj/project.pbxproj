@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6109F1BB173E5A5800F4AB2C /* FasTOrderPriceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6109F1BA173E5A5800F4AB2C /* FasTOrderPriceView.xib */; };
 		61184942173D9498000EEE69 /* FasTOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61184941173D9498000EEE69 /* FasTOrderViewController.m */; };
+		6155E4B5174E85CD00B6F3C9 /* staccato.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6155E4B4174E85BA00B6F3C9 /* staccato.ttf */; };
 		6174FA35173C64A10005371F /* FasTOrdersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6174FA34173C64A10005371F /* FasTOrdersTableViewController.m */; };
 		6174FA3B173C6A660005371F /* FasTTicket.m in Sources */ = {isa = PBXBuildFile; fileRef = 6174FA3A173C6A660005371F /* FasTTicket.m */; };
 		6174FA3E173C7AF00005371F /* FasTOrdersTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6174FA3D173C7AF00005371F /* FasTOrdersTableCell.m */; };
@@ -61,6 +62,7 @@
 		6109F1BA173E5A5800F4AB2C /* FasTOrderPriceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FasTOrderPriceView.xib; sourceTree = "<group>"; };
 		61184940173D9498000EEE69 /* FasTOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FasTOrderViewController.h; sourceTree = "<group>"; };
 		61184941173D9498000EEE69 /* FasTOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FasTOrderViewController.m; sourceTree = "<group>"; };
+		6155E4B4174E85BA00B6F3C9 /* staccato.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = staccato.ttf; sourceTree = "<group>"; };
 		6174FA33173C64A10005371F /* FasTOrdersTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FasTOrdersTableViewController.h; sourceTree = "<group>"; };
 		6174FA34173C64A10005371F /* FasTOrdersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FasTOrdersTableViewController.m; sourceTree = "<group>"; };
 		6174FA39173C6A660005371F /* FasTTicket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FasTTicket.h; path = "submodules/FasT-objc-common/FasTTicket.h"; sourceTree = SOURCE_ROOT; };
@@ -173,6 +175,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6155E4B3174E858300B6F3C9 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				6155E4B4174E85BA00B6F3C9 /* staccato.ttf */,
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
 		61E9D3BC173ACB87007A5F55 = {
 			isa = PBXGroup;
 			children = (
@@ -280,6 +290,7 @@
 		61E9DA0C173AF9D5007A5F55 /* FasT-objc-common */ = {
 			isa = PBXGroup;
 			children = (
+				6155E4B3174E858300B6F3C9 /* assets */,
 				61E9DA3C173C5E01007A5F55 /* FasTApi.h */,
 				61E9DA3D173C5E01007A5F55 /* FasTApi.m */,
 				61E9D9EE173AF9C8007A5F55 /* FasTEvent.h */,
@@ -425,6 +436,7 @@
 				6174FA40173D5EEA0005371F /* FasTOrdersTableCell.xib in Resources */,
 				6174FA43173D6D950005371F /* Localizable.strings in Resources */,
 				6109F1BB173E5A5800F4AB2C /* FasTOrderPriceView.xib in Resources */,
+				6155E4B5174E85CD00B6F3C9 /* staccato.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
