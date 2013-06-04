@@ -10,6 +10,7 @@
 		6109F1BB173E5A5800F4AB2C /* FasTOrderPriceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6109F1BA173E5A5800F4AB2C /* FasTOrderPriceView.xib */; };
 		61184942173D9498000EEE69 /* FasTOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61184941173D9498000EEE69 /* FasTOrderViewController.m */; };
 		6155E4B5174E85CD00B6F3C9 /* staccato.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6155E4B4174E85BA00B6F3C9 /* staccato.ttf */; };
+		615E4D86175E9DC900C02646 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 615E4D79175E9DAF00C02646 /* MBProgressHUD.m */; };
 		6174FA35173C64A10005371F /* FasTOrdersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6174FA34173C64A10005371F /* FasTOrdersTableViewController.m */; };
 		6174FA3B173C6A660005371F /* FasTTicket.m in Sources */ = {isa = PBXBuildFile; fileRef = 6174FA3A173C6A660005371F /* FasTTicket.m */; };
 		6174FA3E173C7AF00005371F /* FasTOrdersTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6174FA3D173C7AF00005371F /* FasTOrdersTableCell.m */; };
@@ -63,6 +64,8 @@
 		61184940173D9498000EEE69 /* FasTOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FasTOrderViewController.h; sourceTree = "<group>"; };
 		61184941173D9498000EEE69 /* FasTOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FasTOrderViewController.m; sourceTree = "<group>"; };
 		6155E4B4174E85BA00B6F3C9 /* staccato.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = staccato.ttf; sourceTree = "<group>"; };
+		615E4D78175E9DAF00C02646 /* MBProgressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		615E4D79175E9DAF00C02646 /* MBProgressHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		6174FA33173C64A10005371F /* FasTOrdersTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FasTOrdersTableViewController.h; sourceTree = "<group>"; };
 		6174FA34173C64A10005371F /* FasTOrdersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FasTOrdersTableViewController.m; sourceTree = "<group>"; };
 		6174FA39173C6A660005371F /* FasTTicket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FasTTicket.h; path = "submodules/FasT-objc-common/FasTTicket.h"; sourceTree = SOURCE_ROOT; };
@@ -183,6 +186,16 @@
 			path = assets;
 			sourceTree = "<group>";
 		};
+		615E4D5B175E9DAE00C02646 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				615E4D78175E9DAF00C02646 /* MBProgressHUD.h */,
+				615E4D79175E9DAF00C02646 /* MBProgressHUD.m */,
+			);
+			name = MBProgressHUD;
+			path = submodules/MBProgressHUD;
+			sourceTree = "<group>";
+		};
 		61E9D3BC173ACB87007A5F55 = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +216,7 @@
 		61E9D3C7173ACB87007A5F55 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				615E4D5B175E9DAE00C02646 /* MBProgressHUD */,
 				61E9DA3F173C5E1A007A5F55 /* MKNetworkKit */,
 				61E9D3E6173AF8E7007A5F55 /* socket.IO */,
 				61E9DA0D173AFA54007A5F55 /* PrintKit */,
@@ -485,6 +499,7 @@
 				6175CBE41743E5010095B806 /* FasTSettingsTableViewController.m in Sources */,
 				6175CBE71743E7C40095B806 /* FasTPrintersTableViewController.m in Sources */,
 				6175CBEA174413AC0095B806 /* FasTConstants.m in Sources */,
+				615E4D86175E9DC900C02646 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

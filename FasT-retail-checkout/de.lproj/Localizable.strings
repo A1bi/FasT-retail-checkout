@@ -23,3 +23,6 @@
 "selectPrinter" = "Drucker auswählen";
 "select" = "auswählen";
 "settings" = "Einstellungen";
+"connecting" = "Verbinde mit Server...";
+"outOfOrder" = "Kein Zugriff möglich.";
+"outOfOrderDetails" = "Aufgrund eines Verbindungsfehlers ist derzeit kein Zugriff auf das System möglich.";
