@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6102DF581768BF2400338D8B /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6102DF571768BF2400338D8B /* Settings.bundle */; };
 		6109F1BB173E5A5800F4AB2C /* FasTOrderPriceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6109F1BA173E5A5800F4AB2C /* FasTOrderPriceView.xib */; };
 		61184942173D9498000EEE69 /* FasTOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61184941173D9498000EEE69 /* FasTOrderViewController.m */; };
 		6155E4B5174E85CD00B6F3C9 /* staccato.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6155E4B4174E85BA00B6F3C9 /* staccato.ttf */; };
@@ -60,6 +61,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6102DF571768BF2400338D8B /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		6109F1BA173E5A5800F4AB2C /* FasTOrderPriceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FasTOrderPriceView.xib; sourceTree = "<group>"; };
 		61184940173D9498000EEE69 /* FasTOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FasTOrderViewController.h; sourceTree = "<group>"; };
 		61184941173D9498000EEE69 /* FasTOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FasTOrderViewController.m; sourceTree = "<group>"; };
@@ -261,6 +263,7 @@
 				61E9D3D4173ACB87007A5F55 /* main.m */,
 				61E9D3D6173ACB87007A5F55 /* FasT-retail-checkout-Prefix.pch */,
 				6174FA45173D6D950005371F /* Localizable.strings */,
+				6102DF571768BF2400338D8B /* Settings.bundle */,
 			);
 			name = "Supporting Files";
 			path = "../FasT-retail-checkout";
@@ -451,6 +454,7 @@
 				6174FA43173D6D950005371F /* Localizable.strings in Resources */,
 				6109F1BB173E5A5800F4AB2C /* FasTOrderPriceView.xib in Resources */,
 				6155E4B5174E85CD00B6F3C9 /* staccato.ttf in Resources */,
+				6102DF581768BF2400338D8B /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

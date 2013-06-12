@@ -36,17 +36,9 @@
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     [self.window makeKeyAndVisible];
     
-
-    FasTApi *api = [FasTApi defaultApi];
-    [api initWithClientType:@"retail-checkout"];
-    [[NSNotificationCenter defaultCenter] addObserverForName:FasTApiIsReadyNotification object:api queue:nil usingBlock:^(NSNotification *note) {
-        [api getOrders];
-    }];
-    
-    [FasTTicketPrinter sharedPrinter];
-    
-    
-    [[UIApplication sharedApplication] setStatusBarHidden:YES];
+    UIApplication *app = [UIApplication sharedApplication];
+    [app setIdleTimerDisabled:YES];
+    [app setStatusBarHidden:YES];
     
     UITabBarController *tbc = [[[UITabBarController alloc] init] autorelease];
     [self.window setRootViewController:tbc];
@@ -64,19 +56,28 @@
     
     hud = [[MBProgressHUD showHUDAddedTo:self.window animated:YES] retain];
     
+    
+    [FasTTicketPrinter sharedPrinter];
+    
     NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
     [center addObserverForName:FasTApiIsReadyNotification object:nil queue:nil usingBlock:^(NSNotification *note) {
+        [[FasTApi defaultApi] getOrders];
         [hud hide:YES];
+    }];
+    [center addObserverForName:FasTApiConnectingNotification object:nil queue:nil usingBlock:^(NSNotification *note) {
+        [self showLocalizedHUDMessageWithKey:@"connecting" mode:MBProgressHUDModeIndeterminate animated:NO];
     }];
     [center addObserver:self selector:@selector(showOutOfOrderMessage) name:FasTApiDisconnectedNotification object:nil];
     [center addObserver:self selector:@selector(showOutOfOrderMessage) name:FasTApiCannotConnectNotification object:nil];
     
+    NSString *retailId = [[NSUserDefaults standardUserDefaults] valueForKey:@"retailId"];
+    if (retailId) {
+        [[FasTApi defaultApi] initWithClientType:@"retail" retailId:retailId];
+    } else {
+        [self showOutOfOrderMessage];
+    }
+    
     return YES;
-}
-
-- (void)applicationDidBecomeActive:(UIApplication *)application
-{
-    [self showLocalizedHUDMessageWithKey:@"connecting" mode:MBProgressHUDModeIndeterminate animated:NO];
 }
 
 - (void)showLocalizedHUDMessageWithKey:(NSString *)key mode:(MBProgressHUDMode)mode animated:(BOOL)animated
