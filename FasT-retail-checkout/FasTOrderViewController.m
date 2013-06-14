@@ -132,7 +132,7 @@
 - (void)tappedPriceButton
 {
     if ([order paid]) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedStringByKey(@"reprintTickets") message:NSLocalizedStringByKey(@"reprintTicketsConfirmation") delegate:self cancelButtonTitle:NSLocalizedStringByKey(@"no") otherButtonTitles:NSLocalizedStringByKey(@"yes"), nil];
+        UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:NSLocalizedStringByKey(@"reprintTickets") message:NSLocalizedStringByKey(@"reprintTicketsConfirmation") delegate:self cancelButtonTitle:NSLocalizedStringByKey(@"no") otherButtonTitles:NSLocalizedStringByKey(@"yes"), nil] autorelease];
         [alert show];
         
     } else {
