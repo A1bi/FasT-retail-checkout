@@ -36,10 +36,6 @@
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     [self.window makeKeyAndVisible];
     
-    UIApplication *app = [UIApplication sharedApplication];
-    [app setIdleTimerDisabled:YES];
-    [app setStatusBarHidden:YES];
-    
     UITabBarController *tbc = [[[UITabBarController alloc] init] autorelease];
     [self.window setRootViewController:tbc];
     
@@ -78,6 +74,12 @@
     }
     
     return YES;
+}
+
+- (void)applicationDidBecomeActive:(UIApplication *)app
+{
+    [app setIdleTimerDisabled:YES];
+    [app setStatusBarHidden:YES];
 }
 
 - (void)showLocalizedHUDMessageWithKey:(NSString *)key mode:(MBProgressHUDMode)mode animated:(BOOL)animated

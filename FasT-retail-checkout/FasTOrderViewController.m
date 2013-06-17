@@ -124,7 +124,8 @@
         if ([response[@"ok"] boolValue]) {
             [order setPaid:YES];
             [self printTickets];
-            [[self tableView] reloadData];
+            
+            [[self navigationController] popViewControllerAnimated:YES];
         }
     }];
 }

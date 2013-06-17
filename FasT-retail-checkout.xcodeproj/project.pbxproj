@@ -406,6 +406,7 @@
 				61E9D3C1173ACB87007A5F55 /* Sources */,
 				61E9D3C2173ACB87007A5F55 /* Frameworks */,
 				61E9D3C3173ACB87007A5F55 /* Resources */,
+				61591DD7176F772700BBE093 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -459,6 +460,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		61591DD7176F772700BBE093 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "# This script automatically sets the version string of\n# an Xcode project from the Git repository containing the project.\n\nset -o errexit\nset -o nounset\n\nINFO_PLIST=\"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Info\"\n\nVERSION=$(git --git-dir=\"${PROJECT_DIR}/.git\" --work-tree=\"${PROJECT_DIR}/\" rev-list master | wc -l)\n\ndefaults write $INFO_PLIST CFBundleVersion $VERSION\n\necho \"VERSION: ${VERSION}\"";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		61E9D3C1173ACB87007A5F55 /* Sources */ = {
